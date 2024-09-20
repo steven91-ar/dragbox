@@ -1,25 +1,25 @@
-const box = document.querySelectorAll('.draggable-box');
+const rings = document.querySelectorAll('.draggable-ring');
 
-boxes.forEach(box => {
+rings.forEach(ring => {
     let isDragging = false;
     let startX, startY, initialX, initialY;
 
-    // mousedown - déclenche le début du drag pour chaque box
-    box.addEventListener('mousedown', (e) => {
+    // mousedown - déclenche le début du drag pour chaque anneau
+    ring.addEventListener('mousedown', (e) => {
         isDragging = true;
 
         // Récupère la position de départ de la souris
         startX = e.clientX;
         startY = e.clientY;
 
-        // Récupère la position initiale du carré
-        const rect = box.getBoundingClientRect();
+        // Récupère la position initiale de l'anneau
+        const rect = ring.getBoundingClientRect();
         initialX = rect.left;
         initialY = rect.top;
 
-        box.style.cursor = 'grabbing';
+        ring.style.cursor = 'grabbing';
         
-        // Ajoute l'événement mousemove à ce document
+        // Ajoute l'événement mousemove
         document.addEventListener('mousemove', onMouseMove);
     });
 
@@ -35,7 +35,8 @@ boxes.forEach(box => {
             const deltaY = currentY - startY;
 
             // Applique la transformation CSS pour déplacer l'élément
-            box.style.transform = `translate(${initialX + deltaX}px, ${initialY + deltaY}px)`;
+            ring.style.left = `${initialX + deltaX}px`;
+            ring.style.top = `${initialY + deltaY}px`;
         }
     }
 
@@ -43,7 +44,7 @@ boxes.forEach(box => {
     document.addEventListener('mouseup', () => {
         if (isDragging) {
             isDragging = false;
-            box.style.cursor = 'grab';
+            ring.style.cursor = 'grab';
 
             // Retire l'événement mousemove
             document.removeEventListener('mousemove', onMouseMove);

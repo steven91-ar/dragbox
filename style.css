@@ -1,18 +1,37 @@
-.draggable-box {
-    width: 100px;
-    height: 100px;
+.draggable-ring {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid;
     position: absolute;
     top: 50px;
     left: 50px;
     cursor: grab;
+    user-select: none;
 }
 
-.draggable-box:nth-child(2) {
-    top: 200px;
-    left: 200px;
+/* Disposition initiale des anneaux */
+.draggable-ring:nth-child(1) {
+    top: 50px;
+    left: 50px;
 }
 
-.draggable-box:nth-child(3) {
-    top: 350px;
-    left: 350px;
+.draggable-ring:nth-child(2) {
+    top: 50px;
+    left: 210px;
+}
+
+.draggable-ring:nth-child(3) {
+    top: 50px;
+    left: 370px;
+}
+
+.draggable-ring:nth-child(4) {
+    top: 140px;
+    left: 130px;
+}
+
+.draggable-ring:nth-child(5) {
+    top: 140px;
+    left: 290px;
 }
