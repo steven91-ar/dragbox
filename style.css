@@ -1,4 +1,4 @@
-#draggable-box {
+.draggable-box {
     width: 100px;
     height: 100px;
     position: absolute;
@@ -6,6 +6,7 @@
     left: 50px;
     cursor: grab;
 }
+
 .draggable-box:nth-child(2) {
     top: 200px;
     left: 200px;
