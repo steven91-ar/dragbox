@@ -1,0 +1,9 @@
+#draggable-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    cursor: grab;
+}
