@@ -1,5 +1,6 @@
-const box = document.getElementById('draggable-box');
+const box = document.querySelectorAll('.draggable-box');
 
+boxes.forEach(box => {
 let isDragging = false;
 let startX, startY, initialX, initialY;
 
@@ -47,4 +48,5 @@ document.addEventListener('mouseup', () => {
         // Retire l'événement mousemove
         document.removeEventListener('mousemove', onMouseMove);
     }
+});
 });

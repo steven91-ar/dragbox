@@ -1,9 +1,17 @@
 #draggable-box {
     width: 100px;
     height: 100px;
-    background-color: #3498db;
     position: absolute;
     top: 50px;
     left: 50px;
     cursor: grab;
+}
+.draggable-box:nth-child(2) {
+    top: 200px;
+    left: 200px;
+}
+
+.draggable-box:nth-child(3) {
+    top: 350px;
+    left: 350px;
 }
